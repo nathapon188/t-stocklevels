@@ -1,4 +1,4 @@
-export type Category = 'Entree' | 'Main' | 'Cafe' | 'Condiments' | 'Packaging Items'
+export type Category = 'Entree' | 'Main' | 'Desserts' | 'Cafe' | 'Condiments' | 'Packaging Items'
 
 export type Group = 'Food Items' | 'Packaging Items'
 
@@ -27,6 +27,8 @@ const items: Omit<StockItem, 'id' | 'stock'>[] = [
   { name: 'Wagyu', unit: 'servings', max: 20, category: 'Main' },
   { name: 'Soft Shell Crabs', unit: 'servings', max: 20, category: 'Main' },
   { name: 'King Prawns', unit: 'servings', max: 20, category: 'Main' },
+  { name: 'Prawns', unit: 'Bag', max: 20, category: 'Main' },
+  { name: 'Squids', unit: 'Bag', max: 20, category: 'Main' },
 
   { name: 'French Fries', unit: 'kg', max: 25, category: 'Cafe' },
   { name: 'Sour Dough', unit: 'loaves', max: 30, category: 'Cafe' },
@@ -40,6 +42,10 @@ const items: Omit<StockItem, 'id' | 'stock'>[] = [
   { name: 'BBQ Sauce', unit: 'L', max: 10, category: 'Condiments' },
   { name: 'Salt', unit: 'kg', max: 5, category: 'Condiments' },
   { name: 'Pepper', unit: 'kg', max: 5, category: 'Condiments' },
+
+  { name: 'Deep Fried Ice Cream', unit: 'Pcs', max: 20, category: 'Desserts' },
+
+
 
   { name: '#1 Uncoated Paper Tray', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Trays & Containers' },
   { name: 'Sandwich Wedge', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Trays & Containers' },
@@ -65,6 +71,7 @@ const items: Omit<StockItem, 'id' | 'stock'>[] = [
 export const CATEGORY_ORDER: Category[] = [
   'Entree',
   'Main',
+  'Desserts',
   'Cafe',
   'Condiments',
   'Packaging Items',
@@ -75,6 +82,7 @@ export const GROUP_ORDER: Group[] = ['Food Items', 'Packaging Items']
 export const CATEGORY_GROUP: Record<Category, Group> = {
   Entree: 'Food Items',
   Main: 'Food Items',
+  Desserts: 'Food Items',
   Cafe: 'Food Items',
   Condiments: 'Food Items',
   'Packaging Items': 'Packaging Items',
@@ -95,6 +103,12 @@ export const CATEGORY_META: Record<
     border: 'border-violet-400',
     text: 'text-violet-300',
     accent: 'accent-violet-400',
+  },
+  Desserts: {
+    dot: 'bg-pink-400',
+    border: 'border-pink-400',
+    text: 'text-pink-300',
+    accent: 'accent-pink-400',
   },
   Cafe: {
     dot: 'bg-amber-400',
