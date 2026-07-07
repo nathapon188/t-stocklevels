@@ -1,4 +1,11 @@
-export type Category = 'Entree' | 'Main' | 'Desserts' | 'Cafe' | 'Condiments' | 'Packaging Items'
+export type Category =
+  | 'Entree'
+  | 'Main'
+  | 'Desserts'
+  | 'Cafe'
+  | 'Condiments'
+  | 'Raw Items'
+  | 'Packaging Items'
 
 export type Group = 'Food Items' | 'Packaging Items'
 
@@ -30,6 +37,10 @@ const items: Omit<StockItem, 'id' | 'stock'>[] = [
   { name: 'Prawns', unit: 'Bag', max: 20, category: 'Main' },
   { name: 'Squids', unit: 'Bag', max: 20, category: 'Main' },
 
+  { name: 'Leg Ham', unit: 'kg', max: 10, category: 'Cafe' },
+  { name: 'Sausages', unit: 'kg', max: 10, category: 'Cafe' },
+  { name: 'Bacon', unit: 'kg', max: 10, category: 'Cafe' },
+  { name: 'Hash Browns', unit: 'kg', max: 10, category: 'Cafe' },
   { name: 'French Fries', unit: 'kg', max: 10, category: 'Cafe' },
   { name: 'Sour Dough', unit: 'loaves', max: 20, category: 'Cafe' },
   { name: 'Sandwich White', unit: 'loaves', max: 20, category: 'Cafe' },
@@ -44,7 +55,14 @@ const items: Omit<StockItem, 'id' | 'stock'>[] = [
   { name: 'Salt', unit: 'kg', max: 5, category: 'Condiments' },
   { name: 'Pepper', unit: 'kg', max: 5, category: 'Condiments' },
   { name: 'Crispy Chilli Oil', unit: 'Btl', max: 2, category: 'Condiments' },
+  { name: 'Dukka', unit: 'Btl', max: 2, category: 'Condiments' },
 
+
+  { name: 'Pork Minced', unit: 'kg', max: 10, category: 'Raw Items' },
+  { name: 'Chicken Minced', unit: 'kg', max: 10, category: 'Raw Items' },
+  { name: 'Wonton Pastry', unit: 'packets', max: 20, category: 'Raw Items' },
+  { name: 'Dumpling Pastry', unit: 'packets', max: 20, category: 'Raw Items' },
+  { name: 'GF Flour', unit: 'kg', max: 10, category: 'Raw Items' },
 
   { name: 'Deep Fried Ice Cream', unit: 'servings', max: 20, category: 'Desserts' },
   { name: 'Coconut Ice Cream', unit: 'servingss', max: 20, category: 'Desserts' },
@@ -63,7 +81,7 @@ const items: Omit<StockItem, 'id' | 'stock'>[] = [
   { name: '750 PP Lid', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Trays & Containers' },
   { name: '500 Rectangular', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Trays & Containers' },
   { name: '700 Rectangular', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Trays & Containers' },
-  { name: '100 Rectangular', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Trays & Containers' },
+  { name: '1000 Rectangular', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Trays & Containers' },
   { name: 'Lid Rectangular', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Trays & Containers' },
   { name: 'Snack Kraft Box', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Trays & Containers' },
 
@@ -80,6 +98,7 @@ export const CATEGORY_ORDER: Category[] = [
   'Desserts',
   'Cafe',
   'Condiments',
+  'Raw Items',
   'Packaging Items',
 ]
 
@@ -91,6 +110,7 @@ export const CATEGORY_GROUP: Record<Category, Group> = {
   Desserts: 'Food Items',
   Cafe: 'Food Items',
   Condiments: 'Food Items',
+  'Raw Items': 'Food Items',
   'Packaging Items': 'Packaging Items',
 }
 
@@ -127,6 +147,12 @@ export const CATEGORY_META: Record<
     border: 'border-teal-400',
     text: 'text-teal-300',
     accent: 'accent-teal-400',
+  },
+  'Raw Items': {
+    dot: 'bg-orange-400',
+    border: 'border-orange-400',
+    text: 'text-orange-300',
+    accent: 'accent-orange-400',
   },
   'Packaging Items': {
     dot: 'bg-rose-400',

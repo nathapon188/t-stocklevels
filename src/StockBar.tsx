@@ -62,7 +62,7 @@ export default function StockBar({ item, onChange }: Props) {
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
         onPointerCancel={handlePointerUp}
-        className="relative h-7 touch-none select-none rounded-full bg-[#1a2233] shadow-[inset_0_1px_3px_rgba(0,0,0,0.5)]"
+        className="relative mr-8 h-7 touch-none select-none rounded-full bg-[#1a2233] shadow-[inset_0_1px_3px_rgba(0,0,0,0.5)]"
         role="slider"
         aria-label={`${item.name} stock level`}
         aria-valuemin={0}
