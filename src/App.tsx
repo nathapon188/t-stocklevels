@@ -3,11 +3,14 @@ import { CATEGORY_GROUP, CATEGORY_META, CATEGORY_ORDER, GROUP_ORDER, makeMockSto
 import type { Category } from './data'
 import StockBar from './StockBar'
 
+type ViewMode = 'all' | 'low'
+
 function App() {
   const [items, setItems] = useState(makeMockStock)
   const [selected, setSelected] = useState<Record<Category, boolean>>(() =>
     Object.fromEntries(CATEGORY_ORDER.map((c) => [c, true])) as Record<Category, boolean>,
   )
+  const [viewMode, setViewMode] = useState<ViewMode>('all')
 
   function handleChange(id: string, stock: number) {
     setItems((prev) => prev.map((i) => (i.id === id ? { ...i, stock } : i)))
@@ -28,6 +31,9 @@ function App() {
   }
 
   const low = items.filter((i) => i.stock / i.max <= 0.2).length
+  const visibleItemCount = items.filter(
+    (i) => selected[i.category] && (viewMode === 'all' || i.stock / i.max <= 0.2),
+  ).length
 
   return (
     <div className="mx-auto min-h-screen max-w-lg bg-[#0f1621] px-4 pb-10">
@@ -84,6 +90,29 @@ function App() {
             )
           })}
         </div>
+
+        <div className="mt-2 flex items-center gap-4">
+          <label className="flex cursor-pointer items-center gap-1.5 text-xs font-medium text-slate-300">
+            <input
+              type="radio"
+              name="viewMode"
+              className="h-3.5 w-3.5 accent-slate-400"
+              checked={viewMode === 'all'}
+              onChange={() => setViewMode('all')}
+            />
+            All stock
+          </label>
+          <label className="flex cursor-pointer items-center gap-1.5 text-xs font-medium text-slate-300">
+            <input
+              type="radio"
+              name="viewMode"
+              className="h-3.5 w-3.5 accent-red-400"
+              checked={viewMode === 'low'}
+              onChange={() => setViewMode('low')}
+            />
+            Low stock only
+          </label>
+        </div>
       </header>
 
       <main className="space-y-4 pt-3">
@@ -92,13 +121,23 @@ function App() {
             (c) => CATEGORY_GROUP[c] === group && selected[c],
           )
           if (groupCategories.length === 0) return null
+          const visibleCategories = groupCategories.filter((category) =>
+            items.some(
+              (i) =>
+                i.category === category && (viewMode === 'all' || i.stock / i.max <= 0.2),
+            ),
+          )
+          if (visibleCategories.length === 0) return null
           return (
             <section key={group} className="space-y-2.5">
               <h2 className="text-xs font-semibold tracking-widest text-slate-500 uppercase">
                 {group}
               </h2>
-              {groupCategories.map((category) => {
-                const categoryItems = items.filter((i) => i.category === category)
+              {visibleCategories.map((category) => {
+                const categoryItems = items.filter(
+                  (i) =>
+                    i.category === category && (viewMode === 'all' || i.stock / i.max <= 0.2),
+                )
                 if (categoryItems.length === 0) return null
                 const categoryLow = categoryItems.filter((i) => i.stock / i.max <= 0.2).length
                 const meta = CATEGORY_META[category]
@@ -148,6 +187,11 @@ function App() {
         })}
         {noneSelected && (
           <p className="pt-10 text-center text-sm text-slate-500">No categories selected.</p>
+        )}
+        {!noneSelected && visibleItemCount === 0 && (
+          <p className="pt-10 text-center text-sm text-slate-500">
+            No items are low on stock.
+          </p>
         )}
       </main>
     </div>

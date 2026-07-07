@@ -30,21 +30,27 @@ const items: Omit<StockItem, 'id' | 'stock'>[] = [
   { name: 'Prawns', unit: 'Bag', max: 20, category: 'Main' },
   { name: 'Squids', unit: 'Bag', max: 20, category: 'Main' },
 
-  { name: 'French Fries', unit: 'kg', max: 25, category: 'Cafe' },
-  { name: 'Sour Dough', unit: 'loaves', max: 30, category: 'Cafe' },
-  { name: 'Sandwich White', unit: 'loaves', max: 30, category: 'Cafe' },
+  { name: 'French Fries', unit: 'kg', max: 10, category: 'Cafe' },
+  { name: 'Sour Dough', unit: 'loaves', max: 20, category: 'Cafe' },
+  { name: 'Sandwich White', unit: 'loaves', max: 20, category: 'Cafe' },
   { name: 'Sandwich GF', unit: 'loaves', max: 20, category: 'Cafe' },
-  { name: 'Burger Bun', unit: 'pcs', max: 100, category: 'Cafe' },
-  { name: 'Croissants', unit: 'pcs', max: 60, category: 'Cafe' },
+  { name: 'Burger Bun', unit: 'pcs', max: 50, category: 'Cafe' },
+  { name: 'Croissants', unit: 'pcs', max: 30, category: 'Cafe' },
+  { name: 'Turkish Bread', unit: 'pcs', max: 30, category: 'Cafe' },
 
   { name: 'Aioli', unit: 'L', max: 10, category: 'Condiments' },
   { name: 'Hollandaise Sauce', unit: 'L', max: 10, category: 'Condiments' },
   { name: 'BBQ Sauce', unit: 'L', max: 10, category: 'Condiments' },
   { name: 'Salt', unit: 'kg', max: 5, category: 'Condiments' },
   { name: 'Pepper', unit: 'kg', max: 5, category: 'Condiments' },
+  { name: 'Crispy Chilli Oil', unit: 'Btl', max: 2, category: 'Condiments' },
 
-  { name: 'Deep Fried Ice Cream', unit: 'Pcs', max: 20, category: 'Desserts' },
 
+  { name: 'Deep Fried Ice Cream', unit: 'servings', max: 20, category: 'Desserts' },
+  { name: 'Coconut Ice Cream', unit: 'servingss', max: 20, category: 'Desserts' },
+  { name: 'Green Tea Ice Cream', unit: 'servingss', max: 20, category: 'Desserts' },
+  { name: 'Mango Ice Cream', unit: 'servingss', max: 20, category: 'Desserts' },
+  { name: 'Vanilla Ice Cream', unit: 'servingss', max: 20, category: 'Desserts' },
 
 
   { name: '#1 Uncoated Paper Tray', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Trays & Containers' },
