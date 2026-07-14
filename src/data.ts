@@ -39,6 +39,8 @@ const items: Omit<StockItem, 'id' | 'stock'>[] = [
   { name: 'Whole Barramundi', unit: 'unit', max: 20, category: 'Main' },
   { name: 'Barramundi Fillet', unit: 'unit', max: 20, category: 'Main' },
   { name: 'Salmon', unit: 'unit', max: 20, category: 'Main' },
+  { name: 'Duck', unit: 'Bag', max: 10, category: 'Main' },
+
 
   { name: 'Leg Ham', unit: 'kg', max: 10, category: 'Cafe' },
   { name: 'Pork Sausages', unit: 'kg', max: 10, category: 'Cafe' },
