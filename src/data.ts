@@ -83,7 +83,7 @@ const items: Omit<StockItem, 'id' | 'stock'>[] = [
   { name: '#1 Uncoated Paper Tray 95x55x35mm', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Trays & Containers' },
   { name: 'Sandwich Wedge', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Trays & Containers' },
   { name: 'Sauce Container (S)', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Trays & Containers' },
-  { name: 'Sauce Container (M) 240x265mm', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Trays & Containers' },
+  { name: 'Sauce Container (M)', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Trays & Containers' },
   { name: 'Sauce Container (L)', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Trays & Containers' },
   { name: 'Sushi Clam', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Trays & Containers' },
   { name: '750 Kraft Bowl', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Trays & Containers' },
@@ -106,7 +106,7 @@ const items: Omit<StockItem, 'id' | 'stock'>[] = [
 
   { name: 'Clear 50um 6"x9" Bag', unit: 'Pcs', max: 100, category: 'Packaging Items', subgroup: 'Bags' },
   { name: 'Paper Bag (S)', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Bags' },
-  { name: 'Paper Bag (L)', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Bags' },
+  { name: 'Paper Bag (M) 240x265mm', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Bags' },
   { name: 'Uber Bag (L)', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Bags' },
 
 ]
