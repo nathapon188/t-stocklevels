@@ -26,10 +26,13 @@ const items: Omit<StockItem, 'id' | 'stock'>[] = [
   { name: 'Chicken Wings', unit: 'servings', max: 20, category: 'Entree' },
   { name: 'Veg Rolls', unit: 'servings', max: 20, category: 'Entree' },
   { name: 'Chicken Rolls', unit: 'servings', max: 20, category: 'Entree' },
+  { name: 'Veg Puff', unit: 'servings', max: 20, category: 'Entree' },
   { name: 'Beef Puff', unit: 'servings', max: 20, category: 'Entree' },
   { name: 'Coconut Prawns', unit: 'servings', max: 20, category: 'Entree' },
   { name: 'Dumpling', unit: 'servings', max: 20, category: 'Entree' },
   { name: 'Wonton', unit: 'servings', max: 20, category: 'Entree' },
+  { name: 'Roti Bread', unit: 'servings', max: 20, category: 'Entree' },
+
 
   { name: 'Wagyu', unit: 'servings', max: 20, category: 'Main' },
   { name: 'Soft Shell Crabs', unit: 'servings', max: 20, category: 'Main' },
