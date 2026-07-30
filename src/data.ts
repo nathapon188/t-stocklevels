@@ -20,6 +20,7 @@ export type StockItem = {
 }
 
 const items: Omit<StockItem, 'id' | 'stock'>[] = [
+  { name: 'Fish Cake', unit: 'servings', max: 20, category: 'Entree' },
   { name: 'BBQ Chicken', unit: 'servings', max: 20, category: 'Entree' },
   { name: 'Chicken Satay', unit: 'servings', max: 20, category: 'Entree' },
   { name: 'Moo Ping', unit: 'servings', max: 20, category: 'Entree' },
@@ -33,7 +34,6 @@ const items: Omit<StockItem, 'id' | 'stock'>[] = [
   { name: 'Wonton', unit: 'servings', max: 20, category: 'Entree' },
   { name: 'Roti Bread', unit: 'servings', max: 20, category: 'Entree' },
 
-
   { name: 'Wagyu', unit: 'servings', max: 20, category: 'Main' },
   { name: 'Soft Shell Crabs', unit: 'servings', max: 20, category: 'Main' },
   { name: 'King Prawns', unit: 'servings', max: 20, category: 'Main' },
@@ -43,7 +43,6 @@ const items: Omit<StockItem, 'id' | 'stock'>[] = [
   { name: 'Barramundi Fillet', unit: 'unit', max: 20, category: 'Main' },
   { name: 'Salmon', unit: 'unit', max: 20, category: 'Main' },
   { name: 'Duck', unit: 'Bag', max: 10, category: 'Main' },
-
 
   { name: 'Leg Ham', unit: 'kg', max: 10, category: 'Cafe' },
   { name: 'Pork Sausages', unit: 'kg', max: 10, category: 'Cafe' },
@@ -58,7 +57,6 @@ const items: Omit<StockItem, 'id' | 'stock'>[] = [
   { name: 'Turkish Bread', unit: 'pcs', max: 30, category: 'Cafe' },
   { name: 'Cheese Sliced', unit: 'kg', max: 5, category: 'Cafe' },
 
-
   { name: 'Aioli', unit: 'L', max: 10, category: 'Condiments' },
   { name: 'Hollandaise Sauce', unit: 'L', max: 10, category: 'Condiments' },
   { name: 'BBQ Sauce', unit: 'L', max: 10, category: 'Condiments' },
@@ -70,8 +68,11 @@ const items: Omit<StockItem, 'id' | 'stock'>[] = [
   { name: 'Crispy Chilli Oil', unit: 'Btl', max: 2, category: 'Condiments' },
   { name: 'Dukka', unit: 'Btl', max: 2, category: 'Condiments' },
 
-  { name: 'Pork Minced', unit: 'kg', max: 10, category: 'Raw Items' },
   { name: 'Chicken Minced', unit: 'kg', max: 10, category: 'Raw Items' },
+  { name: 'Beef Minced', unit: 'kg', max: 10, category: 'Raw Items' },
+  { name: 'Pork Minced', unit: 'kg', max: 10, category: 'Raw Items' },
+  { name: 'Chicken Breast Fillet', unit: 'kg', max: 10, category: 'Raw Items' },
+
   { name: 'Wonton Pastry', unit: 'packets', max: 20, category: 'Raw Items' },
   { name: 'Dumpling Pastry', unit: 'packets', max: 20, category: 'Raw Items' },
   { name: 'GF Flour', unit: 'kg', max: 10, category: 'Raw Items' },
