@@ -82,6 +82,10 @@ const items: Omit<StockItem, 'id' | 'stock'>[] = [
   { name: 'Green Tea Ice Cream', unit: 'servingss', max: 20, category: 'Desserts' },
   { name: 'Mango Ice Cream', unit: 'servingss', max: 20, category: 'Desserts' },
   { name: 'Vanilla Ice Cream', unit: 'servingss', max: 20, category: 'Desserts' },
+  { name: 'Egg Custard', unit: 'servingss', max: 10, category: 'Desserts' },
+  { name: 'Sticky Rice', unit: 'servingss', max: 10, category: 'Desserts' },
+
+
 
 
   { name: '#1 Uncoated Paper Tray 95x55x35mm', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Trays & Containers' },
@@ -101,6 +105,7 @@ const items: Omit<StockItem, 'id' | 'stock'>[] = [
   { name: '16oz PET Cold Cup (475ml)', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Trays & Containers' },
   { name: 'Flat Lid for PET Cups', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Trays & Containers' },
   { name: 'Sugarcane Plate 7"', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Trays & Containers' },
+  { name: 'Burger Kraft Box (PCB2F)', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Trays & Containers' },
   { name: 'Snack Kraft Box (PCB6F)', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Trays & Containers' },
   { name: 'Knotted Skewer', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Trays & Containers' },
   { name: 'Paddle Skewer', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Trays & Containers' },
