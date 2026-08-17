@@ -33,6 +33,7 @@ const items: Omit<StockItem, 'id' | 'stock'>[] = [
   { name: 'Dumpling', unit: 'servings', max: 20, category: 'Entree' },
   { name: 'Wonton', unit: 'servings', max: 20, category: 'Entree' },
   { name: 'Roti Bread', unit: 'servings', max: 20, category: 'Entree' },
+  { name: 'Dim Sim', unit: 'servings', max: 20, category: 'Entree' },
 
   { name: 'Wagyu', unit: 'servings', max: 20, category: 'Main' },
   { name: 'Soft Shell Crabs', unit: 'servings', max: 20, category: 'Main' },
@@ -84,8 +85,6 @@ const items: Omit<StockItem, 'id' | 'stock'>[] = [
   { name: 'Vanilla Ice Cream', unit: 'servingss', max: 20, category: 'Desserts' },
   { name: 'Egg Custard', unit: 'servingss', max: 10, category: 'Desserts' },
   { name: 'Sticky Rice', unit: 'servingss', max: 10, category: 'Desserts' },
-
-
 
 
   { name: '#1 Uncoated Paper Tray 95x55x35mm', unit: 'pcs', max: 100, category: 'Packaging Items', subgroup: 'Trays & Containers' },
