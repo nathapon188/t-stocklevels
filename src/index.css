@@ -9,6 +9,18 @@
 body {
   margin: 0;
   background: #0f1621;
+  overflow: hidden;
+}
+
+/* The app scrolls in its own container with a custom scrollbar (PageScrollbar),
+   because mobile browsers draw an invisible overlay scrollbar that can't be styled. */
+.app-scroll {
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.app-scroll::-webkit-scrollbar {
+  display: none;
 }
 
 ::-webkit-scrollbar {

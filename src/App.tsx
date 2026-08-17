@@ -1,11 +1,13 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { CATEGORY_GROUP, CATEGORY_META, CATEGORY_ORDER, GROUP_ORDER, makeMockStock } from './data'
 import type { Category } from './data'
+import PageScrollbar from './PageScrollbar'
 import StockBar from './StockBar'
 
 type ViewMode = 'all' | 'low'
 
 function App() {
+  const scrollRef = useRef<HTMLDivElement>(null)
   const [items, setItems] = useState(makeMockStock)
   const [selected, setSelected] = useState<Record<Category, boolean>>(() =>
     Object.fromEntries(CATEGORY_ORDER.map((c) => [c, true])) as Record<Category, boolean>,
@@ -36,7 +38,11 @@ function App() {
   ).length
 
   return (
-    <div className="mx-auto min-h-screen max-w-lg bg-[#0f1621] px-4 pb-10">
+    <div
+      ref={scrollRef}
+      className="app-scroll h-[100dvh] overflow-y-auto overscroll-contain bg-[#0f1621] pr-9"
+    >
+      <div className="mx-auto min-h-full max-w-lg bg-[#0f1621] px-4 pb-10">
       <header className="sticky top-0 z-10 -mx-4 border-b border-[#26314a] bg-[#0f1621]/95 px-4 pt-3 pb-2 shadow-[0_4px_16px_rgba(0,0,0,0.35)] backdrop-blur">
         <div className="flex items-center justify-between">
           <h1 className="text-lg font-semibold tracking-tight text-slate-100">Stock Levels</h1>
@@ -193,7 +199,9 @@ function App() {
             No items are low on stock.
           </p>
         )}
-      </main>
+        </main>
+      </div>
+      <PageScrollbar scrollRef={scrollRef} />
     </div>
   )
 }
